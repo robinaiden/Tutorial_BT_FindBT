@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tutorial_BT_FindBT</string>
+
+    <!-- 空白 -->
+    <string name="empty">""</string>
+
+    <!-- 尋找藍芽 -->
+    <string name="find_BT">"存找藍芽裝置"</string>
+
+</resources>
