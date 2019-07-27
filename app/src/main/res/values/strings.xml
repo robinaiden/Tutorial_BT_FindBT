@@ -5,7 +5,7 @@
     <string name="empty">""</string>
 
     <!-- 藍芽 -->
-    <string name="find_BT">"存找藍芽裝置"</string>
+    <string name="find_BT">"尋找藍芽裝置"</string>
     <string name="null_BT">"您的裝置無支援藍芽"</string>
 
 

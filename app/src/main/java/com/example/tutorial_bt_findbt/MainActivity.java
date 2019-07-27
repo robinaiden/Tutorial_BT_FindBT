@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQUEST_ENABLE_BT = 0;
     private TextView textView;
     private Button button;
 
@@ -54,16 +55,19 @@ public class MainActivity extends AppCompatActivity {
     private void FunBTInit(){
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
         if(bluetoothAdapter == null){
+            // Device doesn't support Bluetooth
             Toast.makeText(getApplicationContext(), R.string.null_BT, Toast.LENGTH_SHORT).show();
+            return;
         }
 
         if (!bluetoothAdapter.isEnabled()){
             Intent enableBTIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivity(enableBTIntent);
+            startActivityForResult(enableBTIntent, REQUEST_ENABLE_BT);
+            Toast.makeText(getApplicationContext(), "開啟成功", Toast.LENGTH_SHORT).show();
         } else {
             //搜尋藍芽設備
+            Toast.makeText(getApplicationContext(), "藍芽已開啟", Toast.LENGTH_SHORT).show();
         }
 
     }
